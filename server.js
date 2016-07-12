@@ -7,16 +7,16 @@
 
     .wait() //attendre que la page soit chargée pour récupérer les infos
     .screenshot('home_wikipedia.jpg') //test pour savoir où on est
-   .evaluate (function(){ //va chercher la valeur de...
-      var winner = "null";
-      var montagne = "null";
-      var points = "null";
-      var resultat = [];
+    .evaluate (function(){ //va chercher la valeur de...
+      // var winner = "null";
+      // var montagne = "null";
+      // var points = "null";
+      // var resultat = [];
 
-      resultat[0] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[1].children[1].text;
-      resultat[1] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[6].children[1].text;
-      resultat[2] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[7].children[1].text;
-      return winner; //retourne winner, le résultat texte 
+      var resultat = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[1].children[1].text;
+      // resultat[1] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[6].children[1].text;
+      // resultat[2] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[7].children[1].text;
+      return resultat; //retourne winner, le résultat texte 
 
    }, function(resultat){ //attrape le return
     console.log(resultat) //affiche winner
