@@ -11,11 +11,12 @@
       // var winner = "null";
       // var montagne = "null";
       // var points = "null";
-      // var resultat = [];
+      var resultat = [];
 
-      var resultat = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[1].children[1].text;
-      // resultat[1] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[6].children[1].text;
-      // resultat[2] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[7].children[1].text;
+      resultat[0] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[1].children[1].text;
+      resultat[1] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[6].children[1].text;
+      resultat[2] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[7].children[1].text;
+      
       return resultat; //retourne winner, le résultat texte 
 
    }, function(resultat){ //attrape le return
