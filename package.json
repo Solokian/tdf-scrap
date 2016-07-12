@@ -2,12 +2,15 @@
   "name": "rendu",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "6.2.2"
+  },
   "dependencies": {
-    "nodejs": "^4.4.7",
     "phantomjs": "^2.1.7",
     "nightmare": "^1.8.2"
   },
+  
   "scripts": {
   	"start": "node index.js"
   },
