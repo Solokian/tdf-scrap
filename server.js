@@ -8,11 +8,18 @@
     .wait() //attendre que la page soit chargée pour récupérer les infos
     .screenshot('home_wikipedia.jpg') //test pour savoir où on est
    .evaluate (function(){ //va chercher la valeur de...
-      var winner = $("[title='Tour de France 1953']")[0].parentElement.parentElement.children[1].children[1].text;
+      var winner = "null";
+      var montagne = "null";
+      var points = "null";
+      var resultat = [];
+
+      resultat[0] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[1].children[1].text;
+      resultat[1] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[6].children[1].text;
+      resultat[2] = $("[title='Tour de France 1983']")[0].parentElement.parentElement.children[7].children[1].text;
       return winner; //retourne winner, le résultat texte 
 
-   }, function(winner){ //attrape le return
-    console.log(winner) //affiche winner
+   }, function(resultat){ //attrape le return
+    console.log(resultat) //affiche winner
    })
 
 
